@@ -13,27 +13,16 @@ __Terminal__
 > sudo systemctl restart postgres
 
 ### Setting remote Postgresql
-__Allow remote acess__
- <br>
+#### __Allow remote acess__
 > vim  /etc/postgresql/12/main/postgresql.conf
- <br>
-__Modify from__
- <br> 
+#### __Modify from__
 > #listen_addresses = 'localhost'
- <br>
-__to__
- <br> 
-> #listen_addresses = `'*'` 
- <br>
-> vim /etc/postgresql/12/main/pg_hba.conf
- <br>
+#### __to__
+> #listen_addresses = `'*'`  <br>
+> vim /etc/postgresql/12/main/pg_hba.conf  <br>
 ---------------------------------------------------------------------
- <br>
-__Modify IPv4 local connections__
- <br>
-> host    all             all             127.0.0.1/32            md5 
- <br>
-__to__
-<br>
+#### __Modify IPv4 local connections__
+> host    all             all             127.0.0.1/32            md5 <br>
+#### __to__
 > host    all             all             0.0.0.0/0            md5 <br>
 
