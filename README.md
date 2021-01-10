@@ -21,7 +21,7 @@ __Allow remote acess__
 __Modify from__ 
 > #listen_addresses = 'localhost' <br>
 __to__ 
-> #listen_addresses = `´*´` <br>
+> #listen_addresses = `'*'` <br>
 > vim /etc/postgresql/12/main/pg_hba.conf
 ---------------------------------------------------------------------
 __Modify IPv4 local connections__
