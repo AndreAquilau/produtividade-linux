@@ -2,8 +2,7 @@
 
 ### Configurando acentos para teclado em inglês no linux
 __Terminal__
-> setxkbmap -model abnt -layout us -variant intl
- <br>
+> setxkbmap -model abnt -layout us -variant intl <br>
 > setxkbmap -model abnt2 -layout br -variant abnt2
 
 ### Configurando Portas / TCP
@@ -20,15 +19,12 @@ __Allow remote acess__
 > vim  /etc/postgresql/12/main/postgresql.conf
  
 __Modify from__ 
-> #listen_addresses = 'localhost'
- <br>
+> #listen_addresses = 'localhost' <br>
 __to__ 
-> #listen_addresses = '*'
- <br>
+> #listen_addresses = `*` <br>
 > vim /etc/postgresql/12/main/pg_hba.conf
 ---------------------------------------------------------------------
 __Modify IPv4 local connections__
-> host    all             all             127.0.0.1/32            md5
- <br>
+> host    all             all             127.0.0.1/32            md5 <br>
 __to__
-> host    all             all             0.0.0.0/0            md5
+> host    all             all             0.0.0.0/0            md5 <br>
