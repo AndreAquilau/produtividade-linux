@@ -1,5 +1,3 @@
-# Produtividade com linux
-
 ### Configurando acentos para teclado em inglês no linux
 __Terminal__
 > setxkbmap -model abnt -layout us -variant intl <br>
@@ -16,17 +14,26 @@ __Terminal__
 
 ### Setting remote Postgresql
 __Allow remote acess__
+ <br>
 > vim  /etc/postgresql/12/main/postgresql.conf
- 
-__Modify from__ 
-> #listen_addresses = 'localhost' <br>
+ <br>
+__Modify from__
+ <br> 
+> #listen_addresses = 'localhost'
+ <br>
 __to__
-<br> 
-> #listen_addresses = `'*'` <br>
+ <br> 
+> #listen_addresses = `'*'` 
+ <br>
 > vim /etc/postgresql/12/main/pg_hba.conf
+ <br>
 ---------------------------------------------------------------------
+ <br>
 __Modify IPv4 local connections__
-> host    all             all             127.0.0.1/32            md5 <br>
+ <br>
+> host    all             all             127.0.0.1/32            md5 
+ <br>
 __to__
 <br>
 > host    all             all             0.0.0.0/0            md5 <br>
+
